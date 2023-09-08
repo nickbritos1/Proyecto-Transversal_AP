@@ -1,21 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package proyectotransversall;
 
-/**
- *
- * @author brito
- */
+
+import javax.swing.JOptionPane;
+
 public class ProyectoTransversall {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        
+        try {
+            Class.forName("org.mariadb.jdbc.Driver");
+        } catch (ClassNotFoundException ex) {
+            JOptionPane.showMessageDialog(null, "Error al cargar el driver "+ ex);
+        }
+        
+        
+        
     }
     
 }
