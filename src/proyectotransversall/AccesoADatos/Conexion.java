@@ -12,6 +12,10 @@ public class Conexion {
         private static final String CONTRASENA="";
         private static Connection conexion;
 
+    public static Connection getConexion() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     private Conexion() {
     }
         

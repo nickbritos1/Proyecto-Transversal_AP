@@ -72,6 +72,14 @@ public class Alumno {
         return "Alumno{" + "idAlumno=" + idAlumno + ", Apellido=" + Apellido + ", Nombre=" + Nombre + '}';
     }
 
+    public int getDni() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setDni(int aInt) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
 
     
