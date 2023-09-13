@@ -1,18 +1,17 @@
 package proyectotransversall;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+import proyectotransversall.AccesoADatos.Conexion;
 
-import javax.swing.JOptionPane;
+
 
 public class ProyectoTransversall {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         
+        Connection con=Conexion.getConnection();
         
-        try {
-            Class.forName("org.mariadb.jdbc.Driver");
-        } catch (ClassNotFoundException ex) {
-            JOptionPane.showMessageDialog(null, "Error al cargar el driver "+ ex);
-        }
         //Rama nueva//
         
         
