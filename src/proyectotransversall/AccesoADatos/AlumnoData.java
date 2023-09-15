@@ -169,14 +169,14 @@ public class AlumnoData {
     public List<Alumno> listarAlumno(int dni){
         
         String sql="SELECT idAlumno, dni, apellido, nombre, fechanacimiento FROM alumno WHERE estado = 1";
-        arrayList<Alumno> alumno=new ArrayList<>();
+        ArrayList<Alumno> alumnos=new ArrayList<>();
         try {
             PreparedStatement ps=con.prepareStatement(sql);
             
             ResultSet rs=ps.executeQuery();
             while(rs.next()){
-               
-                alumno=new Alumno();
+               Alumno alumno = new Alumno();
+                
                 alumno.setIdAlumno(rs.getInt("idAlumno"));
                 alumno.setDni(rs.getInt("dni"));
                 alumno.setApellido(rs.getString("apellido"));
@@ -194,7 +194,7 @@ public class AlumnoData {
         } catch (SQLException ex) {
           JOptionPane.showMessageDialog(null, "Error al acceder a la tabla alumno");  
         }
-        return alumno;
+        return alumnos;
     }
 
 }
